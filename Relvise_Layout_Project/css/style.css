@@ -1,0 +1,1117 @@
+/* Практика работы с CSS */
+
+/* ------------------------------------------- Обнуление ------------------------------------------- */
+*,
+*::before,
+*::after {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	box-sizing: border-box;
+}
+/* ------------------------------------------- Ссылка ----------------------------------------------- */
+a {
+	text-decoration: none;
+}
+/* -------------------------------------- Маркированный список -------------------------------------- */
+ul,
+/* -------------------------------------- Нумерованный список --------------------------------------- */
+ol,
+/* ------------------------------------ Отдельный элемент списка ------------------------------------ */
+li {
+	list-style: none;
+}
+/* ------------------------------------------ Изображение ------------------------------------------- */
+img {
+	vertical-align: top;
+}
+/* ----------------------------------------- Заголовок h1 ------------------------------------------- */
+h1,
+/* ----------------------------------------- Заголовок h2 ------------------------------------------- */
+h2,
+/* ----------------------------------------- Заголовок h3 ------------------------------------------- */
+h3,
+/* ----------------------------------------- Заголовок h4 ------------------------------------------- */
+h4,
+/* ----------------------------------------- Заголовок h5 ------------------------------------------- */
+h5,
+/* ----------------------------------------- Заголовок h6 ------------------------------------------- */
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+/* --------------------------------------------- HTML ----------------------------------------------- */
+html,
+/* ----------------------------------- Отображаемое тело страницы ----------------------------------- */
+body {
+	color: #252B42;
+	background: #FAFAFA;
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 500;
+	height: 100%;
+	font-family: Montserrat;
+}
+/* --------------------------------- Элемент разделения контента ------------------------------------ */
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+/* ----------------------------------- Общая оболочка шапки ----------------------------------------- */
+.header {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 50;
+}
+/* ------------------------------- Ограничивающий контейнер шапки ----------------------------------- */
+.header__container {
+	display: flex;
+	min-height: 104px;
+	align-items: center;
+}
+@media (max-width: 479px) {
+	.header__container {
+		min-height: 70px;
+	}
+}
+/* ---------------------------------- Ограничивающий контейнер -------------------------------------- */
+._container {
+	max-width: 1046px;
+	padding: 0px 15px;
+	margin: 0px auto;
+	box-sizing: content-box;
+}
+/* ------------------------------------- Логотип шапки ---------------------------------------------- */
+.header__logo {
+	font-size: 24px;
+	font-weight: 700;
+	color: inherit;
+}
+/* ------------------------------------- Список заголовка ------------------------------------------ */
+.header__menu {
+	margin: 0px 0px 0px 133px;
+}
+@media (max-width: 992px) {
+	.header__menu {
+		margin: 0px 0px 0px 80px;	
+	}
+}
+@media (max-width: 767px) {
+	.header__menu {
+		margin: 0px 0px 0px 40px;	
+	}
+}
+@media (max-width: 479px) {
+	.header__menu {
+		margin: 0px 0px 0px 20px;
+	}
+}
+/* --------------------------------------- Блок списка --------------------------------------------- */
+.menu {
+	padding: 5px 0px;
+}
+/* ----------------------------------- Маркированный список ---------------------------------------- */
+.menu__list {
+	flex-wrap: wrap;
+	display: flex;
+}
+/* ---------------------------------- Отдельный элемент списка -------------------------------------- */
+.menu__item:not(:last-child) {
+	margin: 0px 21px 0px 0px;
+}
+/* ------------------------------------------ Ссылка ------------------------------------------------ */
+.menu__link {
+	color: #737373;
+	font-weight: 600;
+	line-height: calc(24 / 14 * 100%);
+}
+.menu__link:hover {
+	text-decoration: underline;
+}
+@media (max-width: 479px) {
+	.menu__link {
+		font-size: 18px;
+	}
+}
+
+/* ----------------------------- Основное содержимое документа ----------------------------------- */
+.page {
+	flex: 1 1 auto;
+}
+/* ----------------------------------- Основной блок --------------------------------------------  */
+.page__main-block {}
+/* ----------------------------------- Блок сервисов --------------------------------------------- */
+.page__services {
+	position: relative;
+	z-index: 2;
+	margin: -111px 0px 0px 0px;
+}
+/* ---------------------------------- Блок достижений -------------------------------------------- */
+.page__advantages {}
+/*------------------------------------ Блок практики --------------------------------------------- */
+.page__practice {}
+/* ----------------------------------- Блок "Кто мы?" -------------------------------------------- */
+.page__whoweare {}
+/* ----------------------------------- Блок клиентов --------------------------------------------- */
+.page__clients:not(:last-child) {
+	margin: 0px 0px 10px 0px;
+}
+/* ----------------------------------- Блок подписок --------------------------------------------- */
+.page__subscribe {}
+/* ------------------------------------- Блок связи ----------------------------------------------- */
+.page__getintouch {}
+/* ----------------------------------- Блок контактов --------------------------------------------- */
+.page__contact {}
+
+/* ------------------------------------ Шапка блока ---------------------------------------------- */
+.header-block {
+	text-align: center;
+	letter-spacing: 0.2px;
+}
+/* ----------------------------------- Заголовок блока ------------------------------------------- */
+.header-block__title {
+	font-size: 40px;
+	font-weight: 700;
+	line-height: calc(57 / 40 * 100%);
+}
+.header-block__title:not(:last-child) {
+	margin: 0px 0px 10px 0px;
+}
+@media (max-width: 992px) {
+	.header-block__title {
+		font-size: 35px;
+	}
+}
+@media (max-width: 767px) {
+	.header-block__title {
+		font-size: 30px;
+	}
+}
+/*----------------------------------- Подзаголовок блока ----------------------------------------- */
+.header-block__sub-title {
+	color: #737373;
+	font-size: ;
+	line-height: calc(20 / 14 * 100%);
+}
+/* ------------------------------------- Основной блок ---------------------------------------------- */
+.main-block {
+	position: relative;
+}
+/* ---------------------------------- Ограничивающий контейнер -------------------------------------- */
+.main-block__container {}
+/* ------------------------------------ Тело основного блока ---------------------------------------- */
+.main-block__body {
+	position: relative;
+	z-index: 2;
+	max-width: 400px;
+	padding: 184px 0px 191px 0px;
+}
+@media (max-width: 992px) {
+	.main-block__body {
+		padding: 120px 0px 191px 0px;
+	}
+}
+@media (max-width: 479px) {
+	.main-block__body {
+		padding: 115px 0px 160px 0px;
+	}
+}
+.main-block__body > *:not(:last-child) {
+	margin: 0px 0px 35px 0px;
+}
+/* --------------------------------- Заголовок основного блока -------------------------------------- */
+.main-block__title {
+	font-size: 58px;
+	font-weight: 800;
+	line-height: calc(80 / 58 * 100%);
+	letter-spacing: 0.2px;
+}
+@media (max-width: 479px) {
+	.main-block__title {
+		font-size: 42px;
+	}
+}
+/* ----------------------------------- Текст основного блока ---------------------------------------- */
+.main-block__text {
+	color: #737373;
+	font-size: 20px;
+	line-height: calc(30 / 20 * 100%);
+}
+@media (max-width: 479px) {
+	.main-block__text {
+		color: #585757;
+	}
+}
+/* ----------------------------------- Кнопки основного блока --------------------------------------- */
+.main-block__buttons {
+	display: inline-flex;
+	flex-wrap: wrap;
+	margin: -10px 0px;
+}
+/* ----------------------------------- Кнопка основного блока --------------------------------------- */
+.main-block__button {
+	border-radius: 37px;
+	min-height: 48px;
+	font-weight: 700;
+	line-height: calc(28 / 14 * 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.2px;
+	padding: 5px 36px ;
+	margin: 10px 0px;
+	transition: all 0.3s ease 0s;
+}
+@media (max-width: 479px) {
+	.main-block__button {
+		flex: 1 1 100%;
+	}
+}
+@media (min-width: 479px) {
+	.main-block__button:not(:last-child) {
+		margin-right: 10px;
+	}
+}
+/* ------------------------------------ Оранжевая кнопка ------------------------------------------- */
+.main-block__button_orange {
+	color: #FFF;
+	background: #FF7B47;
+}
+.main-block__button_orange:hover {
+	background-color: #fff;
+	color: #ff7b47;
+}
+/* ------------------------------------ Кнопка с границами ----------------------------------------- */
+.main-block__button_border {
+	color: #0D5C63;
+	border: 1px solid #0D5C63;
+}
+.main-block__button_border:hover {
+	background-color: #0d5c63;
+	color: #fff;
+}
+/* ----------------------------------------- Фон --------------------------------------------------- */
+._ibg {
+	position: relative;
+}
+._ibg img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+}
+/* ------------------------------ Изображение основного блока -------------------------------------- */
+.main-block__image {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+@media (max-width: 1300px) {
+	.main-block__image img {
+		object-position: right;
+	}
+}
+@media (max-width: 992px) {
+	.main-block__image {
+		opacity: 0.5;
+	}
+}
+/* ---------------------------------- Блок сервисов ----------------------------------------------- */
+.services {}
+/* ---------------------------------- Тело сервисов ----------------------------------------------- */
+.services__body {
+}
+@media (min-width: 670px) {
+	.services__body {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0px -15px;
+	}
+}
+/* --------------------------------- Колонка сервисов --------------------------------------------- */
+.services__column {
+	padding: 0px 15px;
+	flex: 0 1 calc(100% / 3);
+}
+@media (max-width: 992px) {
+	.services__column {
+		flex: 0 1 50%;
+	}
+	.services__column:not(:last-child) {
+		margin: 0px 0px 30px 0px;
+	}
+	.services__column:last-child {
+		flex: 1 1 100%;
+	}
+}
+@media (min-width: 670px) {
+	.services__column {
+		padding: 0px 15px;
+	}
+}
+/* ---------------------------------- Элемент сервисов ------------------------------------------- */
+.services__item {
+	height: 100%;
+	box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+	background-color: #FFF;
+	padding: 35px;
+}
+@media (max-width: 479px) {
+	.services__item {
+		padding: 25px;
+	}
+}
+/* ---------------------------------- Элемент сервисов -------------------------------------------- */
+.item-service {}
+/* --------------------------- Элемент сервисов зеленого цвета ------------------------------------ */
+.item-service_green {
+	background-color: #005C63;
+}
+.item-service_green .item-service__title {
+	color: #FFF;
+}
+.item-service_green .item-service__text {
+	color: #FFF;
+}
+.item-service > *:not(:last-child) {
+	margin: 0px 0px 10px 0px;
+}
+/* ------------------------------- Иконка элемента сервиса --------------------------------------- */
+.item-service__icon {}
+/* ------------------------------ Заголовок элемента сервиса ------------------------------------- */
+.item-service__title {
+	font-size: 24px;
+	line-height: calc(32 / 24 * 100%);
+	font-weight: 700;
+	letter-spacing: 0.1px;
+}
+/* ------------------------------- Текст элемента сервиса ---------------------------------------- */
+.item-service__text {
+	color: #737373;
+	line-height: calc(20 / 14 * 100%);
+}
+/* ---------------------------------- Блок достижений -------------------------------------------- */
+.advantages {
+	padding: 80px 0px;
+}
+@media (max-width: 992px) {
+	.advantages {
+		padding: 50px 0;
+	}
+}
+@media (max-width: 767px) {
+	.advantages {
+		padding: 40px 0;
+	}
+}
+/*---------------------------------- Шапка блока достижений -------------------------------------- */
+.advantages__header {
+	margin: 0px 0px 50px 0px;
+}
+@media (max-width: 767px) {
+	.advantages__header {
+		margin: 0px 0px 25px 0px;
+	}
+}
+/*---------------------------------- Тело блока достижений --------------------------------------- */
+.advantages__body {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px -15px -30px;
+}
+/*----------------------------------- Колонка достижений ----------------------------------------- */
+.advantages__column {
+	padding: 0px 15px;
+	margin: 0px 0px 30px 0px;
+	flex: 0 1 25%;
+}
+@media (max-width: 1020px) {
+	.advantages__column {
+		flex: 0 1 50%;
+	}
+}
+@media (max-width: 560px) {
+	.advantages__column {
+		flex: 0 1 100%;
+	}
+}
+/*----------------------------------- Элемент достижений ----------------------------------------- */
+.advantages__item {
+	background-color: #FFF;
+	padding: 30px;
+	text-align: center;
+	font-weight: 700;
+}
+.advantages__item > *:not(:last-child) {
+	margin: 0px 0px 10px 0px;
+}
+/*------------------------------- Иконка элемента достижений ------------------------------------- */
+.advantages__icon {
+	height: 48px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+/* ------------------------------- Значение блока достижений ------------------------------------- */
+.advantages__value {
+	font-size: 40px;
+	line-height: calc(57 / 40 * 100%);
+}
+/* -------------------------------- Текст блока достижений --------------------------------------- */
+.advantages__text {
+	color: #737373;
+	font-size: 16px;
+	line-height: calc(24 / 16 * 100%);
+	letter-spacing: 0.1px;
+}
+/*------------------------------------ Блок практики --------------------------------------------- */
+.practice {
+	padding: 125px 0px 80px 0px;
+}
+@media (max-width: 993px) {
+	.practice {
+		padding: 40px 0px 80px 0px;
+	}
+}
+@media (max-width: 767px) {
+	.practice {
+		padding: 0px 0px 40px 0px;
+	}
+}
+/*----------------------------------- Элемент достижений ----------------------------------------- */
+.practice__container {}
+/*--------------------------------- Шапка блока практики ----------------------------------------- */
+.practice__header {
+	margin: 0px 0px 45px 0px;
+}
+/*--------------------------------- Тело блока практики ------------------------------------------ */
+.practice__body {
+	margin: 0px -20px -30px;
+	display: flex;
+	flex-wrap: wrap;
+}
+/*----------------------------------- Колонка практики ------------------------------------------- */
+.practice__column {
+	padding: 0px 20px;
+	margin: 0px 0px 30px 0px;
+	flex: 0 1 25%;
+}
+@media (max-width: 1040px) {
+	.practice__column {
+		flex: 0 1 50%;
+	}
+}
+@media (max-width: 630px) {
+	.practice__column {
+		flex: 0 1 100%;
+	}
+}
+/*----------------------------------- Элемент практики ------------------------------------------- */
+.practice__item {
+}
+/*----------------------------------- Элемент практики ------------------------------------------- */
+.item-practice {
+	background-color: #FFF;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+/*----------------------------------- Контент практики ------------------------------------------- */
+.item-practice__content {
+	padding: 30px;
+	flex: 1 1 auto;
+}
+/*-------------------------------- Ссылка элемента практики -------------------------------------- */
+.item-practice__link {
+	color: inherit;
+	display: inline-block;
+}
+.item-practice__link:hover {
+	text-decoration: underline;
+}
+.item-practice__link:not(:last-child) {
+	margin: 0px 0px 15px 0px;
+}
+/*------------------------------- Заголовок элемента практики ------------------------------------ */
+.item-practice__title {
+	font-size: 16px;
+	font-size: 700;
+	letter-spacing: 0.1px;
+	line-height: calc(24 / 16 * 100%);
+}
+/*-------------------------------- Текст элемента практики --------------------------------------- */
+.item-practice__text {
+	color: #737373;
+	line-height: calc(20 / 14 * 100%);
+}
+/*-------------------------------- Иконка элемента практики -------------------------------------- */
+.item-practice__image {
+	display: block;
+	padding: 0px 0px calc(138 / 230 * 100%) 0px;
+}
+/* ----------------------------------- Блок "Кто мы?" --------------------------------------------- */
+.whoweare {
+	background: #ffffff;
+	padding: 80px 0px 130px 0px;
+}
+.whoweare__container {}
+/* ------------------------------ Заголовок блока "Кто мы?" --------------------------------------- */
+.whoweare__header {
+	margin: 0px 0px 100px 0px;
+}
+/* --------------------------------- Тело блока "Кто мы?" ----------------------------------------- */
+.whoweare__body {
+	display: flex;
+	align-items: flex-start;
+}
+/* --------------------------------- Видео блока "Кто мы?" ---------------------------------------- */
+.whoweare__video {
+	flex: 0 0 calc(600 / 1046 * 100%);
+	position: relative;
+	padding: 0px 0px calc(442 / 1046 * 100%) 0px;
+}
+.whoweare__video iframe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+}
+/* --------------------------------- Контент блока "Кто мы?" -------------------------------------- */
+.whoweare__content {
+	flex: 1 1 auto;
+	padding: 20px 0px 0px 121px;
+}
+@media (max-width: 1080px) {
+	.whoweare__content {
+		padding: 0px 0px 0px 50px;
+	}
+}
+@media (max-width: 950px) {
+	.whoweare {
+		padding: 50px 0px 50px 0px;
+	}
+	.whoweare__body {
+		flex-direction: column-reverse;
+		align-items: stretch;
+	}
+	.whoweare__title {
+		font-size: 24px;
+	}
+	.whoweare__content {
+		padding: 0px 0px 0px 0px;
+	}
+	.whoweare__video {
+		padding: 0px 0px calc(315 / 560 *100%) 0px;
+	}
+	.whoweare__video:not(:last-child) {
+		margin: 50px 0px 0px 0px;
+	}
+	.whoweare__header {
+		margin: 0px 0px 30px 0px;
+	}
+}
+@media (max-width: 767px) {
+	.whoweare {
+		padding: 20px 0px 50px 0px;
+	}
+	.whoweare__top:not(:last-child) {
+		margin: 0px 0px 30px 0px;
+	}
+	.whoweare__video:not(:last-child) {
+		margin: 30px 0px 0px 0px;
+	}
+}
+/* -------------------------------- Заголовок части контента -------------------------------------- */
+.whoweare__title {
+	font-size: 40px;
+	font-weight: 800;
+	line-height: calc(57 / 40 * 100%);
+	letter-spacing: 0.2px;
+}
+.whoweare__title:not(:last-child) {
+	margin: 0px 0px 10px 0px;
+}
+/* ----------------------------------- Текст контента  -------------------------------------------- */
+.whoweare__text {
+	color: #737373;
+	line-height: calc(20 / 14 * 100%);
+}
+/* ---------------------------- Обертка заголовка и текста ---------------------------------------- */
+.whoweare__top:not(:last-child) {
+	margin: 0px 0px 50px 0px;
+}
+/* ------------------------------ Элементы блока "Кто мы?" ---------------------------------------- */
+.whoweare__items {}
+/* ------------------------------ Элемент блока "Кто мы?" ----------------------------------------- */
+.whoweare__item {}
+.whoweare__item:not(:last-child) {
+	margin: 0px 0px 30px 0px;
+}
+/* ------------------------------ Элемент блока "Кто мы?" ----------------------------------------- */
+.item-whoweare {
+	display: flex;
+}
+/* --------------------------------- Иконка элемента ---------------------------------------------- */
+.item-whoweare__icon {
+	flex: 0 0 32px;
+}
+/* ------------------------------- Тело элемента блока -------------------------------------------- */
+.item-whoweare__body {
+	flex: 1 1 auto;
+	padding: 0px 0px 0px 20px;
+}
+/* ------------------------------ Заголовок элемента бока  ---------------------------------------- */
+.item-whoweare__title {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: calc(24 / 16 * 100%);
+}
+.item-whoweare__title:not(:last-child) {
+	margin: 0px 0px 5px 0px;
+}
+/* -------------------------------- Текст элемена блока ------------------------------------------- */
+.item-whoweare__text {
+	color: #737373;
+	line-height: calc(20 / 14 * 100%);
+	white-space: nowrap;
+	width: 220px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+/* ----------------------------------- Блок клиентов ---------------------------------------------- */
+.clients {
+	padding: 50px 0px;
+}
+@media (max-width: 767px) {
+	.clients {
+		padding: 30px 0;
+	}
+}
+/* ------------------------------ Ограничивающий контейнер ---------------------------------------- */
+.clients__container {}
+/* --------------------------------- Элементы клиентов -------------------------------------------- */
+.clients__items {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+/* --------------------------------- Элемент клиентов --------------------------------------------- */
+.clients__item {
+	padding: 8px 15px;
+	flex: 0 1 calc(100% / 6);
+	text-align: center;
+	min-width: 140px;
+}
+/* --------------------------------- Иконка клиентов ---------------------------------------------- */
+.clients__item img {
+	max-width: 100%;
+}
+/* ----------------------------------- Блок подписок ---------------------------------------------- */
+.subscribe {
+	position: relative;
+	padding: 0px 0px 20px 0px;
+}
+.subscribe::before {
+	background: #252B42;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 77px;
+	left: 0;
+	bottom: 0;
+}
+/* ----------------------------- Ограничивающий контейнер ----------------------------------------- */
+.subscribe__container {}
+/* -------------------------------- Тело блока подписок ------------------------------------------- */
+.subscribe__body {
+	position: relative;
+	z-index: 2;
+	background: #17213C;
+	border-radius: 2px;
+	padding: 30px 50px;
+	align-items: center;
+}
+@media (min-width: 1070px) {
+	.subscribe__body {
+		margin: 0px 30px;
+	}
+}
+/* ----------------------------- Заголовок блока подписок ----------------------------------------- */
+.subscribe__title {
+	color: #FFF;
+	font-size: 24px;
+	line-height: calc(32 / 24 *100%);
+	font-weight: 700;
+	max-width: 266px;
+	letter-spacing: 0.1px;
+}
+@media (max-width: 810px) {
+	.subscribe__title {
+		margin: 0px 0px 20px 0px;
+	}
+	.subscribe__body {
+		margin: 0px -15px;
+		padding: 20px 15px;
+	}
+}
+@media (min-width: 810px) {
+	.subscribe__title {
+		max-width: 266px;
+	}
+	.subscribe__body {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+/* --------------------------------------- Форма -------------------------------------------------- */
+.subscribe__form {
+	flex: 0 1 50%;
+	display: flex;
+	align-items: center;
+}
+/* --------------------------------------- Ввод --------------------------------------------------- */
+.subscribe__input {
+	color: #E6E6E6;
+	background: #F9F9F9;
+	width: 100%;
+	flex: 1 1 auto;
+	min-height: 58px;
+	padding: 0px 20px;
+	border: 1px solid #E6E6E6;
+	border-right: 0;
+	box-sizing: border-box;
+	border-radius: 5px 0px 0px 5px;
+}
+.subscribe__input:focus {
+	color: #000;
+}
+/* --------------------------------------- Кнопка ------------------------------------------------- */
+.subscribe__button {
+	color: #FFF;
+	background: #FF7B47;
+	border: 1px solid #E6E6E6;
+	border-radius: 0px 5px 5px 0px;
+	display: flex;
+	min-height: 58px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 0px 22px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+
+
+/* ------------------------------------- Блок связи ----------------------------------------------- */
+.getintouch {
+	padding: 80px 0px 135px 0px;
+}
+/* ------------------------------- Ограничивающий контейнер --------------------------------------- */
+.getintouch__container {}
+/* ---------------------------------- Шапка блока связи ------------------------------------------- */
+.getintouch__header {
+	margin: 0px 0px 80px 0px;
+}
+/* --------------------------------- Элементы блока связи ----------------------------------------- */
+.getintouch__items {
+	margin: 0px -15px;
+}
+/* --------------------------------- Элемент блока связи ------------------------------------------ */
+.getintouch__item {
+	flex: 0 1 calc(100% / 3);
+}
+/* --------------------------------- Элемент блока связи ------------------------------------------ */
+.item-getintouch {
+	background-color: #FFF;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 50px 15px;
+}
+.item-getintouch > *:not(:last-child) {
+	margin: 0px 0px 15px 0px;
+}
+/* ----------------------------------- Иконка элемента -------------------------------------------- */
+.item-getintouch__icon {}
+/* ----------------------------------- Почты элемента --------------------------------------------- */
+.item-getintouch__emails {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+/* ----------------------------------- Почта элемента --------------------------------------------- */
+.item-getintouch__email {
+	color: inherit;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: calc(24 / 16 * 100%);
+}
+.item-getintouch__email:hover {
+	text-decoration: underline;
+}
+/* ---------------------------------- Ярлык элемента --------------------------------------------- */
+.item-getintouch__label {
+	font-size: 16px;
+	font-weight: 700;
+	line-height: calc(24 / 16 * 100%);
+}
+/* ----------------------------------- Кнопка элемента -------------------------------------------- */
+.item-getintouch__button {
+	color: #FF7B47;
+	border: 1px solid #FF7B47;
+	min-height: 44px;
+	font-weight: 600;
+	line-height: calc(24 / 14 * 100%);
+	padding: 5px 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border-radius: 5px;
+	transition: all 0.3s ease 0s;
+}
+.item-getintouch__button:hover {
+	color: #FFF;
+	background-color: #FF7B47;
+	border: 1px solid #FF7B47;
+}
+@media (min-width: 992px) {
+	.getintouch__items {
+		margin: 0px;
+		display: flex;
+		align-items: center;
+	}
+}
+@media (max-width: 992px) {
+	.getintouch {
+		padding: 50px 0px;
+	}
+	.getintouch__header {
+		margin: 0px 0px 50px 0px;
+	}
+	.item-getintouch_active {
+		padding: 50px 15px;
+	}
+}
+@media (max-width: 767px) {
+	.getintouch__header {
+		margin: 0px 0px 30px 0px;
+	}
+}
+/* --------------------------------- Элемент блока связи ------------------------------------------ */
+.item-getintouch_active {
+	color: #FFF;
+	background: #252B42;
+	padding: 80px 15px;
+}
+/* ----------------------------------- Кнопка элемента -------------------------------------------- */
+.item-getintouch_active .item-getintouch__button{
+	color: #FFF;
+	border: 1px solid #FFF;
+}
+/* ----------------------------------- Блок контактов --------------------------------------------- */
+.contact {
+	background-color: #FFF;
+	padding: 42px 0px;
+}
+/* ------------------------------ Ограничивающий контейнер ---------------------------------------- */
+.contact__container {}
+/* -------------------------------- Тело блока контактов ------------------------------------------ */
+.contact__body {}
+/* ------------------------------------ Контент блока --------------------------------------------- */
+.contact__content {
+	padding: 0px 0px 20px 0px;
+}
+@media (min-width: 767px) {
+	.contact__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.contact__content {
+		padding: 0px 20px 0px 0px;
+	}
+}
+/* ----------------------------------- Заголовок блока -------------------------------------------- */
+.contact__title {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: calc(32 / 24 * 100%);
+	letter-spacing: 0.1px;
+}
+.contact__title:not(:last-child) {
+	margin: 0px 0px 10px 0px;
+}
+/* ------------------------------------ Текст блока ------------------------------------------------ */
+.contact__text {
+	color: #737373;
+	line-height: calc(20 / 14 * 100%);
+}
+/* ------------------------------------ Оранжевая кнопка ------------------------------------------- */
+.contact__button {
+	color: #FFF;
+	display: flex;
+	min-height: 58px;
+	background-color: #FF7B47;
+	border-radius: 5px;
+	transition: background-color 0.3s ease 0s;
+	padding: 5px 40px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.contact__button:hover {
+	background-color: #FFF;
+	color: #FF7B47;
+	border: 1px solid #FF7B47;
+}
+
+/* ------------------------------------ Нижний колонтитул ------------------------------------------- */
+.footer {}
+/* ---------------------------------- Обертка верхней части ----------------------------------------- */
+.footer__top {
+	background: #17213C;
+	padding: 35px 0;
+}
+/* --------------------------------- Контейнер верхней части ---------------------------------------- */
+.footer__main {}
+/* --------------------------------- Ограничивающий контейнер --------------------------------------- */
+.footer__row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px -15px;
+}
+/* -------------------------------- Колонка нижнего колонтитул -------------------------------------- */
+.footer__column {
+	padding: 15px 15px;
+	flex: 0 1 calc(100% / 6);
+}
+.footer__column:last-child {
+	flex: 0 1 calc(100% / 3);
+}
+@media (max-width: 992px) {
+	.footer__column {
+		flex: 0 1 25%;
+	}
+	.footer__column:last-child {
+		flex: 1 1 100%;
+	}
+}
+@media (max-width: 767px) {
+	.footer__column {
+		flex: 0 1 50%;
+	}
+	.footer__container {
+		flex-direction: column;
+	}
+	.footer__copy {
+		margin: 0px 0px 15px 0px;
+		text-align: center;
+	}
+}
+/* ----------------------------------------- Ярлык--------------------------------------------------- */
+.footer__label {
+	color: #FFF;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: calc(24 / 16 * 100%);
+	margin: 0px 0px 20px 0px;
+}
+/* --------------------------------- Элемент секции навигации --------------------------------------- */
+.footer__menu {}
+/* --------------------------------- Элемент секции навигации --------------------------------------- */
+.menu-footer {}
+/* ------------------------------------ Маркированный список ---------------------------------------- */
+.menu-footer__list {}
+/* --------------------------------- Отдельный элемент списка --------------------------------------- */
+.menu-footer__item:not(:last-child) {
+	margin: 0px 0px 10px 0px;
+}
+/* ----------------------------------------- Ссылка ------------------------------------------------- */
+.menu-footer__link {
+	color: #FFF;
+	font-weight: 600;
+	line-height: calc(24 / 14 * 100%);
+	display: inline-block;
+	letter-spacing: 0.2px;
+}
+.menu-footer__link:hover {
+	text-decoration: underline;
+}
+/* ------------------------------------- Блок контактов --------------------------------------------- */
+.footer__contacts {}
+.contacts-footer {
+	display: flex;
+	flex-direction: column;
+}
+/* ---------------------------------- Элемент блока контактов --------------------------------------- */
+.contacts-footer__item {
+	color: #FFF;
+	font-weight: 600;
+	padding: 0px 0px 0px 34px;
+	display: flex;
+	align-items: center;
+	min-height: 30px;
+	line-height: calc(24 / 14 * 100%);
+}
+.contacts-footer__item:hover {
+	text-decoration: underline;
+}
+.contacts-footer__item:not(:last-child) {
+	margin: 0px 0px 12px 0px;
+}
+/* ---------------------------------- Элемент блока контактов --------------------------------------- */
+.contacts-footer__item_phone{
+	background: url("../img/footer/icons/01.svg") 0 0 no-repeat;
+}
+/* ---------------------------------- Элемент блока контактов --------------------------------------- */
+.contacts-footer__item_map {
+	background: url("../img/footer/icons/02.svg") 0 0 no-repeat;
+}
+/* ---------------------------------- Элемент блока контактов --------------------------------------- */
+.contacts-footer__item_email {
+	background: url("../img/footer/icons/03.svg") 0 0 no-repeat;
+}
+/* ----------------------------------- Обертка нижней части ----------------------------------------- */
+.footer__buttom {
+	padding: 25px 0px;
+}
+/* ---------------------------------- Контейнер нижней части ---------------------------------------- */
+.footer__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+/* ------------------------------------- Авторские права -------------------------------------------- */
+.footer__copy {
+	color: #737373;
+	font-weight: 600;
+	line-height: calc(24 / 14 * 100%);
+}
+/* ------------------------------------- Социальные сети -------------------------------------------- */
+.footer__social {}
+/* ------------------------------------- Социальные сети -------------------------------------------- */
+.social {
+	display: flex;
+	align-items: center;
+}
+/* ----------------------------------------- Ссылка ------------------------------------------------- */
+.social__item:not(:last-child) {
+	margin: 0px 20px 0px 0px;
+}

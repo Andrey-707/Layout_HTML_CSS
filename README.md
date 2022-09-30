@@ -1,3 +1,3 @@
 # Layout_HTML_CSS
 
-Адаптивная верстка HTML + CSS.
+FRONTEND. Адаптивная верстка HTML + CSS.
